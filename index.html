@@ -5,82 +5,94 @@
 <title>History of Modern UK</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat', sans-serif;
-        background-color: #1f2937;
-        color: #f9fafb;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .slide {
-        width: 90%;
-        height: 85vh;
-        margin: 20px 0;
-        background: linear-gradient(135deg, #111827, #1e293b);
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        padding: 40px;
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        overflow-y: auto;
-        transition: all 0.5s ease;
-    }
-    .active { display: flex; }
-    h1 {
-        color: #fbbf24;
-        margin-bottom: 15px;
-        font-size: 2.5em;
-    }
-    h2 {
-        color: #3b82f6;
-        margin-bottom: 10px;
-        font-size: 1.8em;
-    }
-    p {
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-    ul {
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-    li { margin-bottom: 10px; }
-    button {
-        margin: 10px 5px 0 0;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #3b82f6;
-        color: white;
-        transition: background-color 0.3s;
-    }
-    button:hover { background-color: #2563eb; }
-    .quiz-answer {
-        display: none;
-        margin-top: 10px;
-        font-weight: bold;
-        color: #16a34a;
-    }
-    .image-placeholder {
-        width: 100%;
-        height: 200px;
-        background-color: #374151;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fbbf24;
-        font-size: 18px;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slide {
+    width: 90%;
+    height: 85vh;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #1e293b, #111827);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    padding: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.active {
+    display: flex;
+    opacity: 1;
+}
+h1 {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+h2 {
+    color: #3b82f6;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+button {
+    margin: 10px 5px 0 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b82f6;
+    color: white;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #2563eb;
+}
+.quiz-answer {
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #16a34a;
+}
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #334155;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fbbf24;
+    font-size: 18px;
+    transition: transform 0.5s ease;
+}
+.image-placeholder:hover {
+    transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -88,8 +100,8 @@
 <!-- Slide 1: Title -->
 <div class="slide active">
     <h1>History of Modern UK</h1>
-    <div class="image-placeholder">[UK Modern Image]</div>
-    <p>Focus on the Industrial Revolution, modernization, and the UK's development into a modern state.</p>
+    <div class="image-placeholder">[Modern UK Image]</div>
+    <p>Focus on the Industrial Revolution, modernization, and the UK's evolution into a modern state.</p>
 </div>
 
 <!-- Slide 2: Industrial Revolution -->
@@ -100,17 +112,18 @@
     <ul>
         <li>Steam engines and mechanized factories</li>
         <li>Rapid urbanization and growth of cities</li>
-        <li>Transportation revolution (railways, canals)</li>
+        <li>Transportation revolution: railways and canals</li>
         <li>Major social and economic changes</li>
     </ul>
     <button onclick="document.getElementById('industrial-fact').style.display='block'">Show Fun Fact</button>
-    <p class="quiz-answer" id="industrial-fact">Fact: By 1850, Britain produced 40% of the world’s coal and iron!</p>
+    <p class="quiz-answer" id="industrial-fact">By 1850, Britain produced 40% of the world’s coal and iron!</p>
 </div>
 
 <!-- Slide 3: Social Changes -->
 <div class="slide">
     <h1>Social Changes</h1>
-    <p>The Industrial Revolution brought:</p>
+    <div class="image-placeholder">[Urbanization Image]</div>
+    <p>The Industrial Revolution led to:</p>
     <ul>
         <li>New working conditions and labor movements</li>
         <li>Rise of the middle class</li>
@@ -123,35 +136,37 @@
 <!-- Slide 4: Modern Politics -->
 <div class="slide">
     <h1>Modern UK Politics</h1>
-    <p>The UK today:</p>
+    <div class="image-placeholder">[Parliament/Politics Image]</div>
+    <p>UK today:</p>
     <ul>
-        <li>Constitutional monarchy with a parliamentary democracy</li>
+        <li>Constitutional monarchy and parliamentary democracy</li>
         <li>Prime Minister leads the government</li>
-        <li>Queen/King serves as ceremonial head of state</li>
+        <li>Queen/King is ceremonial head of state</li>
         <li>Member of the Commonwealth</li>
     </ul>
-    <button onclick="alert('Tip: The UK Parliament is one of the oldest in the world.')">Show Tip</button>
+    <button onclick="alert('Tip: UK Parliament is one of the oldest in the world!')">Show Tip</button>
 </div>
 
 <!-- Slide 5: Economy -->
 <div class="slide">
     <h1>Modern Economy</h1>
-    <p>The UK has a strong global economy:</p>
+    <div class="image-placeholder">[Economy/City Image]</div>
+    <p>The UK is a major global economy:</p>
     <ul>
         <li>Financial hub: London</li>
-        <li>Advanced services and technology sectors</li>
-        <li>Major exports include machinery, aerospace, and pharmaceuticals</li>
+        <li>Advanced services and tech sectors</li>
+        <li>Key exports: machinery, aerospace, pharmaceuticals</li>
     </ul>
-    <div class="image-placeholder">[Economy/City Image]</div>
 </div>
 
 <!-- Slide 6: Society & Culture -->
 <div class="slide">
     <h1>Society & Culture</h1>
-    <p>Modern UK is diverse and culturally rich:</p>
+    <div class="image-placeholder">[Culture/Art Image]</div>
+    <p>Modern UK is culturally rich and diverse:</p>
     <ul>
         <li>Multicultural population</li>
-        <li>Strong traditions in literature, music, and art</li>
+        <li>Strong literature, music, art traditions</li>
         <li>Major sports: Football, Rugby, Cricket</li>
     </ul>
     <button onclick="alert('Fun Fact: UK has over 400 museums and galleries!')">Fun Fact</button>
@@ -160,13 +175,15 @@
 <!-- Slide 7: Challenges & Future -->
 <div class="slide">
     <h1>Challenges & Future</h1>
-    <p>Contemporary issues:</p>
+    <div class="image-placeholder">[Future/Technology Image]</div>
+    <p>Contemporary issues and future developments:</p>
     <ul>
         <li>Economic inequality</li>
         <li>Political debates: Brexit, devolution, climate policy</li>
-        <li>Globalization and technological advancement</li>
+        <li>Globalization and technology advancement</li>
+        <li>Green energy and sustainability</li>
     </ul>
-    <button onclick="alert('Fun Fact: The UK is leading in green energy innovation!')">Fun Fact</button>
+    <button onclick="alert('Fun Fact: UK is leading in green energy innovation!')">Fun Fact</button>
 </div>
 
 <!-- Navigation -->
